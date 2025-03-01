@@ -1,196 +1,655 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Gole - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- Navbar -->
-  <header class="navbar">
-    <h1>Portfolio</h1>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="darkModeToggle" checked>
+        <label for="darkModeToggle" class="toggle-label">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio<span></span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="content">
-      <h1>Hello, I'm <span>Bhumika Sahu</span></h1>
-      <p>"I am a full-stack developer who loves creating responsive and user-friendly websites. I enjoy solving
-        problems, building new features, and learning new technologies to improve my skills."</p>
-      <br>
-      <a href="https://flowcv.com/resume/779vmavnvn" class="download-cv">Download CV</a>
-    </div>
-    <div class="profile-image">
-      <img src="images/Bhumika-p.jpg" alt="Bhumika Sahu">
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="hero-content">
+                        <div class="hero-subtitle">👋 Hello, I'm</div>
+                        <h1 class="hero-title">Lucky gole</h1>
+                        <div class="hero-text"><span class="auto-type"></span></div>
+                        <p class="hero-description">
+                            Passionate about creating responsive websites and 
+                            transforming ideas into elegant digital solutions.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn btn-primary">View Work</a>
+                            <a href="#contact" class="btn btn-outline">Contact Me</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="hero-image">
+                        <div class="image-wrapper">
+                            <img src="/images/profile.JPG" alt="Lucky Gole" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-shape">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="currentColor" fill-opacity="0.1" d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,122.7C672,117,768,171,864,197.3C960,224,1056,224,1152,197.3C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects-section">
-    <h2>Full-Stack Projects</h2>
-    <div class="projects-container">
-      <div class="project-card">
-        <img src="images/college-library.png" alt="Project 1">
-        <h3>Full-Stack Project 1</h3>
-        <p><b>college-library</b> for books management</p>
-        <a href="https://college-library.onrender.com/home">View Project</a>
-      </div>
-      <div class="project-card">
-        <img src="images/snapmood.png" alt="Project 2">
-        <h3>Full-Stack Project 2</h3>
-        <p><b>Snapmood</b> a dynamic social media app for sharing moments and connecting with others.</p>
-        <a href="https://snapmood.onrender.com">View Project</a>
-      </div>
-    </div>
-    <br><br>
-    <h2>Frontend Projects</h2>
-    <div class="projects-container">
-      <div class="project-card">
-        <img src="images/earphone.png" alt="Project 3">
-        <h3>Ear-Buds for ear-buds collection</h3>
-        <a href="https://bhumika-sahu-bit.github.io/earphone-project/">View Project</a>
-      </div>
-      <div class="project-card">
-        <img src="images/e-commerce.png" alt="Project 4">
-        <h3>E-commerce for clothes collection </h3>
-        <a href="https://bhumika-sahu-bit.github.io/e-commerce-website/">View Project</a>
-      </div>
-      <div class="project-card">
-        <img src="images/travel-image.png" alt="Project 1">
-        <h3>Travel Booking responsive website</h3>
-        <a href="https://bhumika-sahu-bit.github.io/responsive-hotel-booking-website/">View Project</a>
-      </div>
-      <div class="project-card">
-        <img src="images/img-slide.png" alt="Project 2">
-        <h3>Image slider responsive website</h3>
-        <a href="https://bhumika-sahu-bit.github.io/image-slider/">View Project</a>
-      </div>
-      <div class="project-card">
-        <img src="images/fanta.png" alt="Project 3">
-        <h3>Fanta Home Page</h3>
-        <a href="https://bhumika-sahu-bit.github.io/animated-website/">View Project</a>
-      </div>
-    </div>
-    <br><br>
-    <h2>Clones Projects</h2>
-    <div class="projects-container">
-      <div class="project-card">
-        <img src="images/magma.png" alt="Project 1">
-        <h3>Magma website</h3>
-        <a href="https://bhumika-sahu-bit.github.io/magma.com/">View Project</a>
-      </div>
-      <div class="project-card">
-        <img src="images/rejuice.png" alt="Project 4">
-        <h3>Rejouice website </h3>
-        <a href="https://bhumika-sahu-bit.github.io/Rejouice-website/">View Project</a>
-      </div>
-      <div class="project-card">
-        <img src="images/flipkart.png" alt="Project 2">
-        <h3>flipkart</h3>
-        <a href="https://bhumika-sahu-bit.github.io/flipkart-clone/">View Project</a>
-      </div>
-      <div class="project-card">
-        <img src="images/spotify.png" alt="Project 3">
-        <h3>Spotify</h3>
-        <a href="https://bhumika-sahu-bit.github.io/spotify-clone/">View Project</a>
-      </div>
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-content">
+                        <div class="about-card">
+                            <p class="about-text">
+                                I am a passionate Full Stack Developer focused on creating modern 
+                                and user-friendly web applications. I enjoy turning complex problems 
+                                into simple, beautiful, and intuitive solutions.
+                            </p>
+                            <div class="about-info">
+                                <div class="info-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>golelaksh@gmail.com</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Guna, India</span>
+                                </div>
+                            </div>
+                            <div class="about-buttons">
+                                <a href="resume.pdf" class="btn btn-primary" download>Download CV</a>
+                                <a href="#contact" class="btn btn-outline">Let's Talk</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-cards">
+                        <div class="feature-card">
+                            <i class="fas fa-code"></i>
+                            <h3>Web Development</h3>
+                            <p>Creating responsive and user-friendly websites</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>Responsive Design</h3>
+                            <p>Websites that work on all devices</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-server"></i>
+                            <h3>Backend Development</h3>
+                            <p>Building robust server-side applications</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">My Skills</h2>
+            <div class="skills-wrapper">
+                <!-- Frontend Skills -->
+                <div class="skill-category" data-aos="fade-up">
+                    <h3 class="category-title">Frontend Development</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <h4>HTML5</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <h4>CSS3</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <h4>JavaScript</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <h4>React.js</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-bootstrap"></i>
+                            </div>
+                            <h4>Bootstrap</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 24 24" class="tailwind-icon">
+                                    <path fill="currentColor" d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/>
+                                </svg>
+                            </div>
+                            <h4>Tailwind CSS</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <h4>Next.js</h4>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- Skills Section -->
-  <section id="skills" class="skills-section">
-    <h2>Skills</h2>
-    <div class="skills-container">
-      <div class="skill">
-        <i class="fab fa-html5"></i>
-        <h3>HTML</h3>
-      </div>
-      <div class="skill">
-        <i class="fab fa-css3-alt"></i>
-        <h3>CSS</h3>
-      </div>
-      <div class="skill">
-        <i class="fab fa-js-square"></i>
-        <h3>JavaScript</h3>
-      </div>
-      <div class="skill">
-        <i class="fab fa-node"></i>
-        <h3>Node.js</h3>
-      </div>
-      <div class="skill">
-        <i class="fas fa-database"></i>
-        <h3>MongoDB</h3>
-      </div>
-      <div class="skill">
-        <i class="fas fa-server"></i>
-        <h3>Express.js</h3>
-      </div>
-      <div class="skill">
-        <i class="fab fa-bootstrap"></i>
-        <h3>Bootstrap</h3>
-      </div>
-      <div class="skill">
-        <i class="fas fa-layer-group"></i>
-        <h3>Full Stack Development</h3>
-      </div>
+                <!-- Backend Skills -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="category-title">Backend Development</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <h4>Node.js</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-php"></i>
+                            </div>
+                            <h4>PHP</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h4>MongoDB</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h4>Express.js</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h4>MySQL</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h4>PostgreSQL</h4>
+                        </div>
+                    </div>
+                </div>
 
-      <div class="skill">
-        <i class="fas fa-users"></i>
-        <h3>Team Collaboration</h3>
-      </div>
-      <div class="skill">
-        <i class="fab fa-git-alt"></i>
-        <h3>Git</h3>
-      </div>
-      <div class="skill">
-        <i class="fab fa-npm"></i>
-        <h3>NPM</h3>
-      </div>
-      <div class="skill">
-        <i class="fas fa-upload"></i>
-        <h3>File Uploads (Multer)</h3>
-      </div>
-      <div class="skill">
-        <i class="fab fa-github"></i>
-        <h3>GitHub</h3>
-      </div>
+                <!-- Tools & Others -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="category-title">Tools & Others</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <h4>Git</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <h4>GitHub</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-terminal"></i>
+                            </div>
+                            <h4>Command Line</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4>VS Code</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h4>ChatGPT</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-mouse-pointer"></i>
+                            </div>
+                            <h4>Cursor AI</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="skill">
-        <i class="fas fa-rocket"></i>
-        <h3>Responsive Design</h3>
-      </div>
-    </div>
-  </section>
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">My Projects</h2>
+            <div class="project-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="clone">Clones</button>
+            </div>
+    
+            <div class="row g-4">
+                <!-- Full Stack Projects -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="project-card" data-category="fullstack">
+                        <div class="project-image">
+                            <img src="images/college-library.png" alt="College Library">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://college-library.onrender.com/home" target="_blank" class="project-link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>College Library</h3>
+                            <p>A comprehensive library management system for efficient books management.</p>
+                            <div class="project-tags">
+                                <span>Node.js</span>
+                                <span>Express</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card" data-category="fullstack">
+                        <div class="project-image">
+                            <img src="images/listing.png" alt="listing">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://listing-llhz.onrender.com/listings" target="_blank" class="project-link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Hotel & Villa Booking System</h3>
+                            <p> A full-stack platform for seamless hotel and villa reservations.</p>
+                            <div class="project-tags">
+                                <span>Express</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Frontend Projects -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="project-card" data-category="frontend">
+                        <div class="project-image">
+                            <img src="images/ear-buds.png" alt="Ear-Buds">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://luckygole.github.io/Ear-buds/" target="_blank" class="project-link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Ear-Buds Collection</h3>
+                            <p>Modern e-commerce website for premium earbuds collection.</p>
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card" data-category="frontend">
+                        <div class="project-image">
+                            <img src="images/e-commerce.png" alt="E-commerce">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://luckygole.github.io/e-commerce/" target="_blank" class="project-link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>E-commerce Website</h3>
+                            <p>Modern e-commerce platform for clothing collection with shopping cart functionality.</p>
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card" data-category="frontend">
+                        <div class="project-image">
+                            <img src="images/shoes-website.png" alt="Travel Booking">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://luckygole.github.io/shoes-website-frontend/" target="_blank" class="project-link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Shoes Website</h3>
+                            <p>Shoe Store Website – Responsive design with category effects.</p>
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="project-card" data-category="frontend">
+                        <div class="project-image">
+                            <img src="images/food-website.png" alt="Image Slider">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://luckygole.github.io/Food-website/" target="_blank" class="project-link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Food website</h3>
+                            <p>A visually appealing food ordering platform with a user-friendly interface.</p>
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card" data-category="frontend">
+                        <div class="project-image">
+                            <img src="images/fanta.png" alt="Fanta">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://bhumika-sahu-bit.github.io/animated-website/" target="_blank" class="project-link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Fanta Landing Page</h3>
+                            <p>Animated landing page with creative design and smooth transitions.</p>
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Clone Projects -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="project-card" data-category="clone">
+                        <div class="project-image">
+                            <img src="images/magma.png" alt="Magma">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://bhumika-sahu-bit.github.io/magma.com/" target="_blank" class="project-link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Magma Website Clone</h3>
+                            <p>Pixel-perfect clone of the Magma website with modern animations.</p>
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card" data-category="clone">
+                        <div class="project-image">
+                            <img src="images/Batman.png" alt="Rejouice">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://luckygole.github.io/batman/" target="_blank" class="project-link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Bat-Man landing page</h3>
+                            <p>A dark, cinematic landing page inspired by Batman with immersive visuals.</p>
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card" data-category="clone">
+                        <div class="project-image">
+                            <img src="images/youtube.png" alt="Flipkart">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://luckygole.github.io/Youtube-clone/" target="_blank" class="project-link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Youtube Clone</h3>
+                            <p>A feature-rich video streaming platform replica.</p>
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="project-card" data-category="clone">
+                        <div class="project-image">
+                            <img src="images/spotify.png" alt="Spotify">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://luckygole.github.io/spotify/" target="_blank" class="project-link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                    <a href="#" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Spotify Clone</h3>
+                            <p>Music streaming platform clone with player functionality and playlist management.</p>
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email</h3>
+                            <p>golelaksh@gmail.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Location</h3>
+                            <p>Guna, India</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-share-alt"></i>
+                            <h3>Social Media</h3>
+                            <div class="social-links">
+                                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="text-center">
+                <p>&copy; 2024 Lucky Gole. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section">
-    <h2>Contact Me</h2>
-    <p>Email: bhumi16124@gmail.com</p>
-    <div class="social-icons">
-      <a href="https://github.com/Bhumika-Sahu-bit" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFJ9uCAwpr4bQAAAZOQ7MuQV7xPKeIe-8gd1gmvmOw_yurCcbrv8fprj_Mvz6ljeQ2YXT4IlNgaqwW0LKLxizbeVqMqGyzF-LL336zqd4Qzzqcp41ycKVNEsgw2IaVR8MHh-YI=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fbhumika-sahu-b178a22b2%3Futm_source%3Dshare%26utm_campaign%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dandroid_app"
-        target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.instagram.com/bhumika_sahu.1612/profilecard/?igsh=ZGhvY2JuZWU5MDY4" target="_blank"
-        title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-  </section>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.4/axios.min.js" integrity="sha512-6VJrgykcg/InSIutW2biLwA1Wyq+7bZmMivHw19fI+ycW0jIjsadm8wKQQLlfv3YUS4owfMDlZU38NtaAK6fSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-  <footer>
-    <p>&copy; 2024 Bhumika Sahu. All rights reserved.</p>
-  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
